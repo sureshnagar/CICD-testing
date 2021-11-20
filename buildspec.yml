@@ -4,22 +4,18 @@ phases:
     commands:
       - echo Entered the install phase...
     finally:
-      - echo This always runs even if the update or install command fails
-	  
+      - echo This always runs even if the update or install command fails	  
   pre_build:
     commands:
       - echo Entered the pre_build phase...
     finally:
-      - echo This always runs even if the update or install command fails
-	  
+      - echo This always runs even if the update or install command fails	  
   build:
     commands:
       - echo "This is build phase...Zipping my webpage"
-
   post_build:
     commands:
       - echo "Deployed to S3"
-
 artifacts:
   files:
     - '**/*'
