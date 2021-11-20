@@ -3,10 +3,14 @@ phases:
   install:
     commands:
       - echo Entered the install phase...
+    finally:
+      - echo This always runs even if the update or install command fails
 	  
   pre_build:
     commands:
       - echo Entered the pre_build phase...
+    finally:
+      - echo This always runs even if the update or install command fails
 	  
   build:
     commands:
